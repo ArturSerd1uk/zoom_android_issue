@@ -142,7 +142,7 @@ packages:
   flutter_zoom_videosdk:
     dependency: "direct main"
     description:
-      path: "local_plugins/zoom_video_sdk"
+      path: "local_plugins/flutter-zoom-video-sdk-update"
       relative: true
     source: path
     version: "1.7.10"

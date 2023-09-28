@@ -1,5 +1,5 @@
-import 'package:flutter/services.dart';
 import 'package:events_emitter/events_emitter.dart';
+import 'package:flutter/services.dart';
 
 /// Enum of ZoomVideoSdk Event
 class EventType {

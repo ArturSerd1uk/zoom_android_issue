@@ -1,5 +1,3 @@
-// ignore_for_file: constant_identifier_names, non_constant_identifier_names
-
 import 'package:flutter/services.dart';
 import 'package:flutter_zoom_videosdk/native/zoom_videosdk_CRC_helper.dart';
 import 'package:flutter_zoom_videosdk/native/zoom_videosdk_audio_helper.dart';
@@ -93,33 +91,16 @@ class PhoneStatus {
 
 /// The reason for the failure of the telephone call.
 class PhoneFailedReason {
-  static const None = 'ZoomVideoSDKPhoneFailedReason_None';
-
-  /// For initialization.
-  static const Busy = 'ZoomVideoSDKPhoneFailedReason_Busy';
-
-  /// The telephone number is busy.
-  static const NotAvailable = 'ZoomVideoSDKPhoneFailedReason_Not_Available';
-
-  /// The telephone number is out of service.
-  static const UserHangup = 'ZoomVideoSDKPhoneFailedReason_User_Hangup';
-
-  /// The user hangs up.
-  static const OtherFail = 'ZoomVideoSDKPhoneFailedReason_Other_Fail';
-
-  /// Other reasons.
-  static const NoAnswer = 'ZoomVideoSDKPhoneFailedReason_No_Answer';
-
-  /// The user did not answer the call.
-  static const BlockNoHost = 'ZoomVideoSDKPhoneFailedReason_Block_No_Host';
-
-  /// The invitation by phone is blocked by the system due to an absent host.
-  static const BlockHighRate = 'ZoomVideoSDKPhoneFailedReason_Block_High_Rate';
-
-  /// The invite by phone is blocked by the system due to the high cost.
-  static const BlockTooFrequent = 'ZoomVideoSDKPhoneFailedReason_Block_Too_Frequent';
-
-  /// To join the session, the invitee would press one on the phone. An invitee who fails to respond will encounter a timeout. If there are too many invitee timeouts, the call invitation feature for this session will be blocked.
+  static const None = 'ZoomVideoSDKPhoneFailedReason_None'; /// For initialization.
+  static const Busy = 'ZoomVideoSDKPhoneFailedReason_Busy'; /// The telephone number is busy.
+  static const NotAvailable = 'ZoomVideoSDKPhoneFailedReason_Not_Available'; /// The telephone number is out of service.
+  static const UserHangup = 'ZoomVideoSDKPhoneFailedReason_User_Hangup'; /// The user hangs up.
+  static const OtherFail = 'ZoomVideoSDKPhoneFailedReason_Other_Fail'; /// Other reasons.
+  static const NoAnswer = 'ZoomVideoSDKPhoneFailedReason_No_Answer'; /// The user did not answer the call.
+  static const BlockNoHost = 'ZoomVideoSDKPhoneFailedReason_Block_No_Host'; /// The invitation by phone is blocked by the system due to an absent host.
+  static const BlockHighRate = 'ZoomVideoSDKPhoneFailedReason_Block_High_Rate'; /// The invite by phone is blocked by the system due to the high cost.
+  static const BlockTooFrequent =
+      'ZoomVideoSDKPhoneFailedReason_Block_Too_Frequent'; /// To join the session, the invitee would press one on the phone. An invitee who fails to respond will encounter a timeout. If there are too many invitee timeouts, the call invitation feature for this session will be blocked.
 }
 
 /// The chat message delete type are sent in the onChatMsgDeleteNotification:messageID:deleteBy: callback.
@@ -150,9 +131,11 @@ class LiveTranscriptionOperationType {
   static const None = 'ZoomVideoSDKLiveTranscription_OperationType_None';
   static const Update = 'ZoomVideoSDKLiveTranscription_OperationType_Update';
   static const Delete = 'ZoomVideoSDKLiveTranscription_OperationType_Delete';
-  static const Complete = 'ZoomVideoSDKLiveTranscription_OperationType_Complete';
+  static const Complete =
+      'ZoomVideoSDKLiveTranscription_OperationType_Complete';
   static const Add = 'ZoomVideoSDKLiveTranscription_OperationType_Add';
-  static const NotSupport = 'ZoomVideoSDKLiveTranscription_OperationType_NotSupported';
+  static const NotSupport =
+      'ZoomVideoSDKLiveTranscription_OperationType_NotSupported';
 }
 
 class DialInNumberType {
@@ -164,10 +147,8 @@ class DialInNumberType {
 /// Cloud recording consent type.
 class ConsentType {
   static const ConsentType_Invalid = 'ConsentType_Invalid';
-  static const ConsentType_Traditional =
-      'ConsentType_Traditional'; //In this case, 'accept' means agree to be recorded to gallery and speaker mode, 'decline' means leave session.
-  static const ConsentType_Individual =
-      'ConsentType_Individual'; //In this case, 'accept' means agree to be recorded to a separate file, 'decline' means stay in session and can't be recorded.
+  static const ConsentType_Traditional = 'ConsentType_Traditional'; //In this case, 'accept' means agree to be recorded to gallery and speaker mode, 'decline' means leave session.
+  static const ConsentType_Individual = 'ConsentType_Individual'; //In this case, 'accept' means agree to be recorded to a separate file, 'decline' means stay in session and can't be recorded.
 }
 
 /// Type of video network status.
@@ -225,47 +206,70 @@ class Errors {
   static const Unknown = 'ZoomVideoSDKError_Unknown';
   static const AuthBase = 'ZoomVideoSDKError_Auth_Base';
   static const AuthError = 'ZoomVideoSDKError_Auth_Error';
-  static const AuthEmptyKeyorSecret = 'ZoomVideoSDKError_Auth_Empty_Key_or_Secret';
-  static const AuthWrongKeyorSecret = 'ZoomVideoSDKError_Auth_Wrong_Key_or_Secret';
-  static const AuthDoesNotSupportSDK = 'ZoomVideoSDKError_Auth_DoesNot_Support_SDK';
+  static const AuthEmptyKeyorSecret =
+      'ZoomVideoSDKError_Auth_Empty_Key_or_Secret';
+  static const AuthWrongKeyorSecret =
+      'ZoomVideoSDKError_Auth_Wrong_Key_or_Secret';
+  static const AuthDoesNotSupportSDK =
+      'ZoomVideoSDKError_Auth_DoesNot_Support_SDK';
   static const AuthDisableSDK = 'ZoomVideoSDKError_Auth_Disable_SDK';
-  static const JoinSessionNoSessioName = 'ZoomVideoSDKError_JoinSession_NoSessionName';
-  static const JoinSessioNoSessionToken = 'ZoomVideoSDKError_JoinSession_NoSessionToken';
-  static const JoinSessionNoUserName = 'ZoomVideoSDKError_JoinSession_NoUserName';
-  static const JoinSessionInvalidSessionName = 'ZoomVideoSDKError_JoinSession_Invalid_SessionName';
-  static const JoinSessionInvalidPassword = 'ZoomVideoSDKError_JoinSession_InvalidPassword';
-  static const JoinSessionInvalidSessionToken = 'ZoomVideoSDKError_JoinSession_Invalid_SessionToken';
-  static const JoinSessionSessionNameTooLong = 'ZoomVideoSDKError_JoinSession_SessionName_TooLong';
+  static const JoinSessionNoSessioName =
+      'ZoomVideoSDKError_JoinSession_NoSessionName';
+  static const JoinSessioNoSessionToken =
+      'ZoomVideoSDKError_JoinSession_NoSessionToken';
+  static const JoinSessionNoUserName =
+      'ZoomVideoSDKError_JoinSession_NoUserName';
+  static const JoinSessionInvalidSessionName =
+      'ZoomVideoSDKError_JoinSession_Invalid_SessionName';
+  static const JoinSessionInvalidPassword =
+      'ZoomVideoSDKError_JoinSession_InvalidPassword';
+  static const JoinSessionInvalidSessionToken =
+      'ZoomVideoSDKError_JoinSession_Invalid_SessionToken';
+  static const JoinSessionSessionNameTooLong =
+      'ZoomVideoSDKError_JoinSession_SessionName_TooLong';
   static const JoinSessionTokenMismatchedSessionName =
       'ZoomVideoSDKError_JoinSession_Token_MismatchedSessionName';
-  static const JoinSessionTokenNoSessionName = 'ZoomVideoSDKError_JoinSession_Token_NoSessionName';
+  static const JoinSessionTokenNoSessionName =
+      'ZoomVideoSDKError_JoinSession_Token_NoSessionName';
   static const JoinSessionTokenRoleTypeEmptyOrWrong =
       'ZoomVideoSDKError_JoinSession_Token_RoleType_EmptyOrWrong';
   static const JoinSessionTokenUserIdentityTooLong =
       'ZoomVideoSDKError_JoinSession_Token_UserIdentity_TooLong';
   static const SessionBase = 'ZoomVideoSDKError_Session_Base';
-  static const SessionModuleNotFound = 'ZoomVideoSDKError_Session_Module_Not_Found';
-  static const SessionServiceInvaild = 'ZoomVideoSDKError_Session_Service_Invaild';
+  static const SessionModuleNotFound =
+      'ZoomVideoSDKError_Session_Module_Not_Found';
+  static const SessionServiceInvaild =
+      'ZoomVideoSDKError_Session_Service_Invaild';
   static const SessionJoinFailed = 'ZoomVideoSDKError_Session_Join_Failed';
   static const SessionNoRights = 'ZoomVideoSDKError_Session_No_Rights';
-  static const SessionAlreadyInProgress = 'ZoomVideoSDKError_Session_Already_In_Progress';
-  static const SessionDontSupportSessionType = 'ZoomVideoSDKError_Session_Dont_Support_SessionType';
+  static const SessionAlreadyInProgress =
+      'ZoomVideoSDKError_Session_Already_In_Progress';
+  static const SessionDontSupportSessionType =
+      'ZoomVideoSDKError_Session_Dont_Support_SessionType';
   static const SessionReconncting = 'ZoomVideoSDKError_Session_Reconncting';
   static const SessionDisconncting = 'ZoomVideoSDKError_Session_Disconncting';
   static const SessionNotStarted = 'ZoomVideoSDKError_Session_Not_Started';
   static const SessionNeedPassword = 'ZoomVideoSDKError_Session_Need_Password';
-  static const SessionPasswordWrong = 'ZoomVideoSDKError_Session_Password_Wrong';
-  static const SessionRemoteDBError = 'ZoomVideoSDKError_Session_Remote_DB_Error';
+  static const SessionPasswordWrong =
+      'ZoomVideoSDKError_Session_Password_Wrong';
+  static const SessionRemoteDBError =
+      'ZoomVideoSDKError_Session_Remote_DB_Error';
   static const SessionInvalidParam = 'ZoomVideoSDKError_Session_Invalid_Param';
   static const SessionAudioError = 'ZoomVideoSDKError_Session_Audio_Error';
-  static const SessionAudioNoMicrophone = 'ZoomVideoSDKError_Session_Audio_No_Microphone';
+  static const SessionAudioNoMicrophone =
+      'ZoomVideoSDKError_Session_Audio_No_Microphone';
   static const SessionVideoError = 'ZoomVideoSDKError_Session_Video_Error';
-  static const SessionVideoDeviceError = 'ZoomVideoSDKError_Session_Video_Device_Error';
-  static const SessionLiveStreamError = 'ZoomVideoSDKError_Session_Live_Stream_Error';
+  static const SessionVideoDeviceError =
+      'ZoomVideoSDKError_Session_Video_Device_Error';
+  static const SessionLiveStreamError =
+      'ZoomVideoSDKError_Session_Live_Stream_Error';
   static const SessionPhoneError = 'ZoomVideoSDKError_Session_Phone_Error';
-  static const DontSupportMultiStreamVideoUser = 'ZoomVideoSDKError_Dont_Support_Multi_Stream_Video_User';
-  static const FailAssignUserPrivilege = 'ZoomVideoSDKError_Fail_Assign_User_Privilege';
-  static const NoRecordingInProcess = 'ZoomVideoSDKError_No_Recording_In_Process';
+  static const DontSupportMultiStreamVideoUser =
+      'ZoomVideoSDKError_Dont_Support_Multi_Stream_Video_User';
+  static const FailAssignUserPrivilege =
+      'ZoomVideoSDKError_Fail_Assign_User_Privilege';
+  static const NoRecordingInProcess =
+      'ZoomVideoSDKError_No_Recording_In_Process';
   static const MallocFailed = 'ZoomVideoSDKError_Malloc_Failed';
   static const NotInSession = 'ZoomVideoSDKError_Not_In_Session';
   static const NoLicense = 'ZoomVideoSDKError_No_License';
@@ -279,25 +283,38 @@ class Errors {
   static const AudioModuleNotReady = 'ZoomVideoSDKError_Audio_Module_Not_Ready';
   static const AudioModuleError = 'ZoomVideoSDKError_Audio_Module_Error';
   static const NoAudioData = 'ZoomVideoSDKError_No_Audio_Data';
-  static const PreprocessRawdataError = 'ZoomVideoSDKError_Preprocess_Rawdata_Error';
-  static const RawdataNoDeviceRunning = 'ZoomVideoSDKError_Rawdata_No_Device_Running';
+  static const PreprocessRawdataError =
+      'ZoomVideoSDKError_Preprocess_Rawdata_Error';
+  static const RawdataNoDeviceRunning =
+      'ZoomVideoSDKError_Rawdata_No_Device_Running';
   static const RawdataInitDevice = 'ZoomVideoSDKError_Rawdata_Init_Device';
-  static const RawdataVirtualDevice = 'ZoomVideoSDKError_Rawdata_Virtual_Device';
+  static const RawdataVirtualDevice =
+      'ZoomVideoSDKError_Rawdata_Virtual_Device';
   static const RawdataCannotChangeVirtualDeviceInPreview =
       'ZoomVideoSDKError_Rawdata_Cannot_Change_Virtual_Device_In_Preview';
-  static const RawdataInternalError = 'ZoomVideoSDKError_Rawdata_Internal_Error';
+  static const RawdataInternalError =
+      'ZoomVideoSDKError_Rawdata_Internal_Error';
   static const RawdataSendTooMuchDataInSingleTime =
       'ZoomVideoSDKError_Rawdata_Send_Too_Much_Data_In_Single_Time';
-  static const RawdataSendTooFrequently = 'ZoomVideoSDKError_Rawdata_Send_Too_Frequently';
-  static const RawdataVirtualMicIsTerminate = 'ZoomVideoSDKError_Rawdata_Virtual_Mic_Is_Terminate';
+  static const RawdataSendTooFrequently =
+      'ZoomVideoSDKError_Rawdata_Send_Too_Frequently';
+  static const RawdataVirtualMicIsTerminate =
+      'ZoomVideoSDKError_Rawdata_Virtual_Mic_Is_Terminate';
   static const SessionShareError = 'ZoomVideoSDKError_Session_Share_Error';
-  static const SessionShareModuleNotReady = 'ZoomVideoSDKError_Session_Share_Module_Not_Ready';
-  static const SessionShareYouAreNotSharing = 'ZoomVideoSDKError_Session_Share_You_Are_Not_Sharing';
-  static const SessionShareTypeIsNotSupport = 'ZoomVideoSDKError_Session_Share_Type_Is_Not_Support';
-  static const SessionShareInternalError = 'ZoomVideoSDKError_Session_Share_Internal_Error';
-  static const Permission_RECORD_AUDIO = 'ZoomVideoSDKError_Permission_RECORD_AUDIO';
-  static const Permission_READ_PHONE_STATE = 'ZoomVideoSDKError_Permission_READ_PHONE_STATE';
-  static const BLUETOOTH_CONNECT = 'ZoomVideoSDKError_Permission_BLUETOOTH_CONNECT';
+  static const SessionShareModuleNotReady =
+      'ZoomVideoSDKError_Session_Share_Module_Not_Ready';
+  static const SessionShareYouAreNotSharing =
+      'ZoomVideoSDKError_Session_Share_You_Are_Not_Sharing';
+  static const SessionShareTypeIsNotSupport =
+      'ZoomVideoSDKError_Session_Share_Type_Is_Not_Support';
+  static const SessionShareInternalError =
+      'ZoomVideoSDKError_Session_Share_Internal_Error';
+  static const Permission_RECORD_AUDIO =
+      'ZoomVideoSDKError_Permission_RECORD_AUDIO';
+  static const Permission_READ_PHONE_STATE =
+      'ZoomVideoSDKError_Permission_READ_PHONE_STATE';
+  static const BLUETOOTH_CONNECT =
+      'ZoomVideoSDKError_Permission_BLUETOOTH_CONNECT';
 }
 
 class InitConfig {
@@ -420,9 +437,12 @@ class ZoomVideoSdk extends ZoomVideoSdkPlatform {
     configMap.putIfAbsent("logFilePrefix", () => configs.logFilePrefix);
     configMap.putIfAbsent("appGroupId", () => configs.appGroupId);
     configMap.putIfAbsent("enableFullHD", () => configs.enableFullHD);
-    configMap.putIfAbsent("videoRawDataMemoryMode", () => configs.videoRawDataMemoryMode);
-    configMap.putIfAbsent("audioRawDataMemoryMode", () => configs.audioRawDataMemoryMode);
-    configMap.putIfAbsent("shareRawDataMemoryMode", () => configs.shareRawDataMemoryMode);
+    configMap.putIfAbsent(
+        "videoRawDataMemoryMode", () => configs.videoRawDataMemoryMode);
+    configMap.putIfAbsent(
+        "audioRawDataMemoryMode", () => configs.audioRawDataMemoryMode);
+    configMap.putIfAbsent(
+        "shareRawDataMemoryMode", () => configs.shareRawDataMemoryMode);
     configMap.putIfAbsent("speakerFilePath", () => configs.speakerFilePath);
 
     return await methodChannel
@@ -439,7 +459,8 @@ class ZoomVideoSdk extends ZoomVideoSdkPlatform {
     configMap.putIfAbsent("userName", () => configs.userName);
     configMap.putIfAbsent("audioOptions", () => configs.audioOptions);
     configMap.putIfAbsent("videoOptions", () => configs.videoOptions);
-    configMap.putIfAbsent("sessionIdleTimeoutMins", () => configs.sessionIdleTimeoutMins);
+    configMap.putIfAbsent(
+        "sessionIdleTimeoutMins", () => configs.sessionIdleTimeoutMins);
 
     return await methodChannel
         .invokeMethod<String>('joinSession', configMap)
@@ -472,7 +493,9 @@ class ZoomVideoSdk extends ZoomVideoSdkPlatform {
 
   @override
   Future<String> cleanup() async {
-    return await methodChannel.invokeMethod<String>('cleanup').then<String>((String? value) => value ?? "");
+    return await methodChannel
+        .invokeMethod<String>('cleanup')
+        .then<String>((String? value) => value ?? "");
   }
 
   @override

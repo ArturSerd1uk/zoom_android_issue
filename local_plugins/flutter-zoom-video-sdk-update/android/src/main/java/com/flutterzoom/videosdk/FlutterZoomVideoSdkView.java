@@ -10,6 +10,7 @@ import com.flutterzoom.videosdk.convert.*;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 import io.flutter.plugin.platform.PlatformView;
 import us.zoom.sdk.ZoomVideoSDK;
@@ -141,7 +142,11 @@ public class FlutterZoomVideoSdkView implements PlatformView {
         }
 
         if (sharing) {
-            currentCanvas = user.getShareCanvas();
+            ZoomVideoSDKUser mySelf = ZoomVideoSDK.getInstance().getSession().getMySelf();
+            if (!Objects.equals(userId, mySelf.getUserID())) {
+                currentCanvas = user.getShareCanvas();
+                currentCanvas.subscribe(videoView, videoAspect, ZoomVideoSDKVideoResolution.ZoomVideoSDKResolution_Auto);
+            }
         } else if (hasMultiCamera) {
             List<ZoomVideoSDKVideoCanvas> multiCameraList = user.getMultiCameraCanvasList();
             int index = Integer.parseInt(multiCameraIndex);

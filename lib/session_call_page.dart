@@ -27,7 +27,6 @@ class _SessionCallPageState extends State<SessionCallPage> {
   late final dynamic _userLeaveListener;
   late final dynamic _sessionLeaveListener;
   late final dynamic _userAudioStatusChangedListener;
-  late final dynamic _userActiveAudioChangedListener;
 
   List<ZoomVideoSdkUser> _sessionParticipants = [];
   List<String> _talkingUsers = [];
@@ -263,7 +262,6 @@ class _SessionCallPageState extends State<SessionCallPage> {
     eventListener.eventEmitter.removeEventListener(_userLeaveListener);
     eventListener.eventEmitter.removeEventListener(_sessionLeaveListener);
     eventListener.eventEmitter.removeEventListener(_userAudioStatusChangedListener);
-    eventListener.eventEmitter.removeEventListener(_userActiveAudioChangedListener);
 
     super.dispose();
   }

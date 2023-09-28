@@ -38,7 +38,7 @@ dependencies:
   permission_handler: ^10.4.3
   dart_jsonwebtoken: ^2.4.2
   flutter_zoom_videosdk:
-    path: ./local_plugins/zoom_video_sdk
+    path: ./local_plugins/flutter-zoom-video-sdk-update
 
 dev_dependencies:
   flutter_test:

@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:flutter_zoom_videosdk/native/zoom_videosdk_virtual_background_item.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
-
 ///@nodoc
 abstract class ZoomVideoSdkVirtualBackgroundHelperPlatform extends PlatformInterface {
   ZoomVideoSdkVirtualBackgroundHelperPlatform() : super(token: _token);
@@ -21,20 +20,25 @@ abstract class ZoomVideoSdkVirtualBackgroundHelperPlatform extends PlatformInter
   }
 
   Future<ZoomVideoSdkVirtualBackgroundItem?> addVirtualBackgroundItem(String filePath) async {
-    throw UnimplementedError('addVirtualBackgroundItem() has not been implemented.');
+    throw UnimplementedError(
+        'addVirtualBackgroundItem() has not been implemented.');
   }
 
   Future<String> removeVirtualBackgroundItem(String imageName) async {
-    throw UnimplementedError('removeVirtualBackgroundItem() has not been implemented.');
+    throw UnimplementedError(
+        'removeVirtualBackgroundItem() has not been implemented.');
   }
 
   Future<List<ZoomVideoSdkVirtualBackgroundItem>> getVirtualBackgroundItemList() async {
-    throw UnimplementedError('getVirtualBackgroundItemList() has not been implemented.');
+    throw UnimplementedError(
+        'getVirtualBackgroundItemList() has not been implemented.');
   }
 
   Future<String> setVirtualBackgroundItem(String imageName) async {
-    throw UnimplementedError('setVirtualBackgroundItem() has not been implemented.');
+    throw UnimplementedError(
+        'setVirtualBackgroundItem() has not been implemented.');
   }
+
 }
 
 /// Helper class for virtual background
@@ -52,9 +56,10 @@ class ZoomVideoSdkVirtualBackgroundHelper extends ZoomVideoSdkVirtualBackgroundH
     var itemString = await methodChannel
         .invokeMethod<String>('addVirtualBackgroundItem', params)
         .then<String>((String? value) => value ?? "");
-// TODO:   itemString not nullable String
+
     Map<String, dynamic> itemMap = jsonDecode(itemString!);
-    var vbItem = ZoomVideoSdkVirtualBackgroundItem.fromJson(itemMap);
+    var vbItem =
+    ZoomVideoSdkVirtualBackgroundItem.fromJson(itemMap);
     return vbItem;
   }
 
@@ -89,8 +94,10 @@ class ZoomVideoSdkVirtualBackgroundHelper extends ZoomVideoSdkVirtualBackgroundH
         .then<String?>((String? value) => value);
 
     var itemListJson = jsonDecode(itemListString!) as List;
-    List<ZoomVideoSdkVirtualBackgroundItem> itemList =
-        itemListJson.map((languageJson) => ZoomVideoSdkVirtualBackgroundItem.fromJson(languageJson)).toList();
+    List<ZoomVideoSdkVirtualBackgroundItem> itemList = itemListJson
+        .map((languageJson) =>
+        ZoomVideoSdkVirtualBackgroundItem.fromJson(languageJson))
+        .toList();
 
     return itemList;
   }
@@ -107,4 +114,5 @@ class ZoomVideoSdkVirtualBackgroundHelper extends ZoomVideoSdkVirtualBackgroundH
         .invokeMethod<String>('setVirtualBackgroundItem', params)
         .then<String>((String? value) => value ?? "");
   }
+
 }
