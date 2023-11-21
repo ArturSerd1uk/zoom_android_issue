@@ -35,7 +35,6 @@ class CallControls extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      // TODO use AppIcons.microphone when the off icon will be provided
                       isMuted ? const Icon(Icons.mic_off) : const Icon(Icons.mic),
                       const SizedBox(height: 8.0),
                       const Text(
@@ -59,7 +58,6 @@ class CallControls extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      // TODO use AppIcons.cameraOff when the on icon will be provided
                       isCameraOn
                           ? const Icon(Icons.videocam_rounded)
                           : const Icon(Icons.videocam_off_rounded),
@@ -71,7 +69,7 @@ class CallControls extends StatelessWidget {
                     ],
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ],
